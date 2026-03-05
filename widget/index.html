@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meeting Reminder</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Zoho CRM Embedded App SDK — MUST load before app.js -->
+  <script src="https://live.zwidgets.com/js-sdk/1.2/ZohoEmbeddedAppSDK.min.js"></script>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+</head>
+<body>
+  <div id="app">
+    <!-- Page 1: Greeting -->
+    <div id="page-greeting">
+      <div id="header">
+        <h1 id="greeting">Loading...</h1>
+        <div id="clock"></div>
+      </div>
+    </div>
+
+    <!-- Page 2: Meetings (hidden initially) -->
+    <div id="page-meetings" class="hidden">
+      <h2 id="transitionMsg">Here are your meetings for today</h2>
+      <ul id="meetings"></ul>
+    </div>
+  </div>
+
+  <lottie-player id="notifyAnim"
+    src="https://assets8.lottiefiles.com/packages/lf20_touohxv0.json"
+    background="transparent"
+    speed="1"
+    style="width: 100px; height: 100px; display: none;"
+    loop
+    autoplay>
+  </lottie-player>
+
+  <script src="app.js"></script>
+</body>
+</html>
